@@ -1,0 +1,8 @@
+FROM docker.elastic.co/kibana/kibana:7.17.5
+
+USER root
+
+RUN apt-get update && \
+    apt-get -y install vim telnet mlocate iputils-ping net-tools
+
+USER kibana
